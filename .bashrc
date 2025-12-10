@@ -28,3 +28,4 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 shopt -s autocd
+shopt -s globstar
