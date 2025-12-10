@@ -1,20 +1,12 @@
--- lua/gtags/init.lua
 local M = {}
 
--- 기본 설정
 local config = {
-  -- gtags 명령어 이름
   bin = "global",
-
-  -- 커맨드 인자 없이 호출했을 때 <cword>를 자동으로 사용
   cword_fallback = true,
-
-  -- quickfix / loclist 중 무엇을 쓸지
   use_loclist = false,
-
   qf = {
-    open = false,    -- 결과 있으면 창 자동 오픈
-    height = 5,    -- copen 높이
+    open = false,
+    height = 5,
   },
 }
 
@@ -22,7 +14,6 @@ local function trim(s)
   return (s:gsub("^%s+", ""):gsub("%s+$", ""))
 end
 
--- 외부에서 불러오는 setup(opts)
 function M.setup(opts)
   config = vim.tbl_deep_extend("force", config, opts or {})
   M.config = config
