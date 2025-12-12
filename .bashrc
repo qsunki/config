@@ -7,7 +7,7 @@
 
 eval "$(fzf --bash)"
 
-alias ls='/usr/bin/ls --color=auto'
+alias ls='/usr/bin/ls --color=auto -A'
 alias la='/usr/bin/ls --color=auto -A'
 alias l='/usr/bin/ls --color=auto -A'
 
@@ -27,5 +27,4 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
-shopt -s autocd
 shopt -s globstar
