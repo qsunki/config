@@ -33,7 +33,7 @@ local function parse_grep(line)
 end
 
 local function global(fargs)
-  local cmd = { "global", "-n", "--result=grep" }
+  local cmd = { "global", "-N", "--result=grep" }
   vim.list_extend(cmd, fargs)
 
   local output = vim.fn.systemlist(cmd)
